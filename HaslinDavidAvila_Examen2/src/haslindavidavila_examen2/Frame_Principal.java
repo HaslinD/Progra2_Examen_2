@@ -291,6 +291,11 @@ public class Frame_Principal extends javax.swing.JFrame {
                 "Nombre", "Artista", "Genero", "Duracion"
             }
         ));
+        tablaFavs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaFavsMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(tablaFavs);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -304,10 +309,10 @@ public class Frame_Principal extends javax.swing.JFrame {
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         jTabbedPane3.addTab("Ver Favoritos", jPanel9);
@@ -933,27 +938,31 @@ public class Frame_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        DefaultTreeModel m = (DefaultTreeModel) arbol.getModel (); 
-        DefaultMutableTreeNode Root1 = (DefaultMutableTreeNode) m.getRoot (); 
-        DefaultMutableTreeNode categoria; 
-        categoria = nodo_Playlist; 
-        DefaultMutableTreeNode node; 
-        node = new DefaultMutableTreeNode (playlist); 
-        DefaultMutableTreeNode nombre_can; 
-        for (PlayList pl: playlist) {
-            nombre_can = new DefaultMutableTreeNode (t.getNombre ()); 
-            nodo.add (nombre_can); 
-        } 
-        Tipo_categoria.add (node); 
-        raiz1.add (tipo_categoria); 
-        m.reload (); 
-        m = (DefaultTreeModel) arbol.getModel (); 
-        Root1 = (DefaultMutableTreeNode) m.getRoot (); 
-        tipo_categoria = nodo_Cancion; node = new DefaultMutableTreeNode (songs); 
-        for (Songs t: songs) {nombre_can = new DefaultMutableTreeNode (t.getNombre ()); 
-        nodo.add (nombre_can); } Tipo_categoria.add (node); raiz1.add (tipo_categoria); 
+//        DefaultTreeModel m = (DefaultTreeModel) arbol.getModel (); 
+//        DefaultMutableTreeNode Root1 = (DefaultMutableTreeNode) m.getRoot (); 
+//        DefaultMutableTreeNode categoria; 
+//        categoria = nodo_Playlist; 
+//        DefaultMutableTreeNode node; 
+//        node = new DefaultMutableTreeNode (playlist); 
+//        DefaultMutableTreeNode nombre_can; 
+//        for (PlayList pl: playlist) {
+//            nombre_can = new DefaultMutableTreeNode (pl.getNombre ()); 
+//            nodo.add (nombre_can); 
+//        } 
+//        Tipo_categoria.add (node); 
+//        raiz1.add (tipo_categoria); 
+//        m.reload (); 
+//        m = (DefaultTreeModel) arbol.getModel (); 
+//        Root1 = (DefaultMutableTreeNode) m.getRoot (); 
+//        tipo_categoria = nodo_Cancion; node = new DefaultMutableTreeNode (songs); 
+//        for (Songs t: songs) {nombre_can = new DefaultMutableTreeNode (t.getNombre ()); 
+//        nodo.add (nombre_can); } Tipo_categoria.add (node); raiz1.add (tipo_categoria); 
         m.reload ();
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void tablaFavsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaFavsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaFavsMouseClicked
 
     /**
      * @param args the command line arguments
