@@ -7,7 +7,7 @@ public class Usuarios {
     private int edad;
     private String username;
     private String password;
-    private ArrayList<PlayList> playlist = new ArrayList(); 
+    private ArrayList playlist = new ArrayList(); 
     private ArrayList<Canciones> favoritos =  new ArrayList();
 
     public Usuarios() {
@@ -53,11 +53,11 @@ public class Usuarios {
         this.password = password;
     }
 
-    public ArrayList<PlayList> getPlaylist() {
+    public ArrayList getPlaylist() {
         return playlist;
     }
 
-    public void setPlaylist(ArrayList<PlayList> playlist) {
+    public void setPlaylist(ArrayList playlist) {
         this.playlist = playlist;
     }
 
@@ -69,7 +69,7 @@ public class Usuarios {
         this.favoritos = favoritos;
     }
 
-    public void setPlay (PlayList play){
+    public void setPlay (Object play){
         playlist.add(play);
     }
     
